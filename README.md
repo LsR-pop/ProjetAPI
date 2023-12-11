@@ -12,8 +12,8 @@ We will need to restructure the database; <br>
 From this restructuring of the database, we will create the Entity-Relationship Diagram (ERD);<br>
 Build a back-end API connected to a front-end interface;<br>
 Once our API project is functional, we will deploy it online.
-<br>
 
+<br>
 STACK TECHNIQUE
 
 Nous avons choisi REACT car il est facile à apprendre, il a une syntaxe simple à prendre en main. C’est une librairie JavaScript open source qui peut être facilement manipulable par les développeurs car c'est un langage connu c’est un framework très flexible et très réactif. De plus il a une grande communauté derrière lui.
