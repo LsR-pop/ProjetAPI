@@ -1,6 +1,6 @@
 # ProjetAPI
 
-PRESENTATION DU PROJET : 
+PRESENTATION DU PROJET :
 
 We are a group of 3 students, and our mission is to build an API within a week.
 
@@ -20,7 +20,7 @@ STACK TECHNIQUE
 
 Nous avons choisi Node car il est particulièrement efficace pour développer des applications web à forte charge. Il est facile d'apprentissage. Il est rapide et permet de créer des applications web rapides et réactives.
 
-Nous avons choisi Figma pour le prototypage et le design de l'API, car il permet une collaboration en temps réel et offre des outils de prototypage et d'animation pour créer des maquettes interactives et animées de nos designs. 
+Nous avons choisi Figma pour le prototypage et le design de l'API, car il permet une collaboration en temps réel et offre des outils de prototypage et d'animation pour créer des maquettes interactives et animées de nos designs.
 
 Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données relationnel) car il est open source, fonctionne sur pratiquement toutes les plateformes. MySQL est très bien protégé par des fonctions de sécurité telles que SSL. Il est facile à apprendre et très bien documenté.
 
@@ -39,6 +39,7 @@ choix de la stack technique (fait)<br>
 justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
 creation du MCD (en cours)<br>
+creation des wireframes (en cours)<br>
 developpement du front (à faire)<br>
 developpement du back (à faire)<br>
 mise en ligne (à faire)<br>
@@ -46,7 +47,7 @@ creation des slides de la présentation orale (à faire)<br>
 remplir les "post mortem" (à faire)
 
 <br>
-POST MORTEM 
+POST MORTEM
 
 <br>Commentaires du projet :
 
