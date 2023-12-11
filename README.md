@@ -29,10 +29,12 @@ Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données rel
 <br>
 MCD
 
+<br>.
+
 <br>
 POINT D'AVANCEMENT (checklist à mettre à jour)
 
-presentation du projet (fait)<br>
+<br>presentation du projet (fait)<br>
 choix de la stack technique (fait)<br>
 justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
