@@ -4,7 +4,7 @@ PRESENTATION DU PROJET :
 
 We are a group of 3 students, and our mission is to build an API within a week.
 
-This mission will involve developing an API based on a 2023/2024 extraction of data from the opendata.paris.fr API 
+This mission will involve developing an API based on a 2023/2024 extraction of data from the opendata.paris.fr API <br>
 "Que Faire à Paris?" -> https://opendata.paris.fr/explore/dataset/que-faire-a-paris-/information/.
 In our case, this will be specifically for the period from September 2023 to December 2024.
 
