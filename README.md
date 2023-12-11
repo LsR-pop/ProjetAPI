@@ -34,7 +34,7 @@ MCD
 <br>
 POINT D'AVANCEMENT (checklist à mettre à jour)
 
-<br>presentation du projet - [x](fait)<br>
+<br>presentation du projet (fait)<br>
 choix de la stack technique (fait)<br>
 justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
