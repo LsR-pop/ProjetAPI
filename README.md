@@ -16,15 +16,15 @@ Once our API project is functional, we will deploy it online.
 <br>
 STACK TECHNIQUE
 
-Nous avons choisi REACT car 
+Nous avons choisi REACT car il est facile à apprendre, il a une syntaxe simple à prendre en main. C’est une librairie JavaScript open source qui peut être facilement manipulable par les développeurs car c'est un langage connu c’est un framework très flexible et très réactif. De plus il a une grande communauté derrière lui.
 
-Nous avons choisi Node car
+Nous avons choisi Node car il est particulièrement efficace pour développer des applications web à forte charge. Il est facile d'apprentissage. Il est rapide et permet de créer des applications web rapides et réactives.
 
-Nous avons choisi Figma car
+Nous avons choisi Figma pour le prototypage et le design de l'API, car il permet une collaboration en temps réel et offre des outils de prototypage et d'animation pour créer des maquettes interactives et animées de nos designs. 
 
-Nous avons choisi MYSQL car
+Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données relationnel) car il est open source, fonctionne sur pratiquement toutes les plateformes. MySQL est très bien protégé par des fonctions de sécurité telles que SSL. Il est facile à apprendre et très bien documenté.
 
-Nous avons choisi ORM? car
+(Nous avons choisi ORM? car)
 
 <br>
 MCD
