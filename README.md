@@ -29,7 +29,7 @@ Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données rel
 <br>
 MCD
 
-<br>.
+<br>img test
 
 <br>
 POINT D'AVANCEMENT (checklist à mettre à jour)
