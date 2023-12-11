@@ -48,7 +48,7 @@ remplir les "post mortem" (à faire)
 <br>
 POST MORTEM 
 
-Commentaires du projet :
+<br>Commentaires du projet :
 
 Nos difficultés rencontrés :
 
