@@ -13,7 +13,7 @@ From this restructuring of the database, we will create the Entity-Relationship 
 Build a back-end API connected to a front-end interface;<br>
 Once our API project is functional, we will deploy it online.
 
-
+<br>
 STACK TECHNIQUE
 
 Nous avons choisi REACT car 
