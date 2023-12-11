@@ -39,6 +39,7 @@ choix de la stack technique (fait)<br>
 justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
 creation du MCD (en cours)<br>
+creation des wireframes (en cours)<br>
 developpement du front (à faire)<br>
 developpement du back (à faire)<br>
 mise en ligne (à faire)<br>
