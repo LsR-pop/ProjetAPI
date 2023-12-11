@@ -14,7 +14,7 @@ Build a back-end API connected to a front-end interface;<br>
 Once our API project is functional, we will deploy it online.
 
 <br>
-STACK TECHNIQUE<br>
+STACK TECHNIQUE
 
 Nous avons choisi REACT car 
 
@@ -27,10 +27,10 @@ Nous avons choisi MYSQL car
 Nous avons choisi ORM? car
 
 <br>
-MCD<br>
+MCD
 
 <br>
-POINT D'AVANCEMENT (checklist à mettre à jour)<br>
+POINT D'AVANCEMENT (checklist à mettre à jour)
 
 presentation du projet (fait)<br>
 choix de la stack technique (fait)<br>
