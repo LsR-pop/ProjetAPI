@@ -16,7 +16,7 @@ Once our API project is functional, we will deploy it online.
 
 STACK TECHNIQUE
 
-Nous avons choisi REACT car
+Nous avons choisi REACT car 
 
 Nous avons choisi Node car
 
@@ -32,6 +32,16 @@ MCD
 
 POINT D'AVANCEMENT (checklist à mettre à jour)
 
+presentation du projet (fait)
+choix de la stack technique (fait)
+justification de la stack technique (en cours)
+extraction du fichier json (fait)
+creation du MCD (en cours)
+developpement du front (à faire)
+developpement du back (à faire)
+mise en ligne (à faire)
+creation des slides de la présentation orale (à faire)
+remplir les "post mortem" (à faire)
 
 POST MORTEM 
 
