@@ -26,10 +26,10 @@ Nous avons choisi MYSQL car
 
 Nous avons choisi ORM? car
 
-
+<br>
 MCD
 
-
+<br>
 POINT D'AVANCEMENT (checklist à mettre à jour)
 
 presentation du projet (fait)<br>
@@ -43,6 +43,7 @@ mise en ligne (à faire)<br>
 creation des slides de la présentation orale (à faire)<br>
 remplir les "post mortem" (à faire)
 
+<br>
 POST MORTEM 
 
 Commentaires du projet :
