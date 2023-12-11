@@ -16,7 +16,7 @@ Once our API project is functional, we will deploy it online.
 <br>
 STACK TECHNIQUE
 
-Nous avons choisi REACT car il est facile à apprendre, il a une syntaxe simple à prendre en main. C’est une librairie JavaScript open source qui peut être facilement manipulable par les développeurs car c'est un langage connu c’est un framework très flexible et très réactif. De plus il a une grande communauté derrière lui.
+<br>Nous avons choisi REACT car il est facile à apprendre, il a une syntaxe simple à prendre en main. C’est une librairie JavaScript open source qui peut être facilement manipulable par les développeurs car c'est un langage connu c’est un framework très flexible et très réactif. De plus il a une grande communauté derrière lui.
 
 Nous avons choisi Node car il est particulièrement efficace pour développer des applications web à forte charge. Il est facile d'apprentissage. Il est rapide et permet de créer des applications web rapides et réactives.
 
