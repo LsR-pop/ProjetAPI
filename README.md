@@ -24,6 +24,8 @@ Nous avons choisi Figma pour le prototypage et le design de l'API, car il permet
 
 Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données relationnel) car il est open source, fonctionne sur pratiquement toutes les plateformes. MySQL est très bien protégé par des fonctions de sécurité telles que SSL. Il est facile à apprendre et très bien documenté.
 
+Nous avons choisi Tailwind CSS comme framework CSS car il est open source. La fonctionnalité principale de cette bibliothèque est, contrairement à d'autres frameworks CSS comme Bootstrap, qu'elle ne procure pas une série de classes prédéfinies pour des éléments tels que des boutons ou des tables. À la place, Tailwind crée une liste de classes CSS « utilitaires » pouvant être utilisés pour ajouter un style à chaque élément en les mélangeant et en les agençant.
+
 (Nous avons choisi ORM? car)
 
 <br>
@@ -36,7 +38,7 @@ POINT D'AVANCEMENT (checklist à mettre à jour)
 
 <br>presentation du projet (fait)<br>
 choix de la stack technique (fait)<br>
-justification de la stack technique (en cours)<br>
+justification de la stack technique (fait)<br>
 extraction du fichier json (fait)<br>
 creation du MCD (fait)<br>
 creation des wireframes (fait)<br>
