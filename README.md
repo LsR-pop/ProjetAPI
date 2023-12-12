@@ -40,8 +40,8 @@ justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
 creation du MCD (fait)<br>
 creation des wireframes (fait)<br>
-developpement du front (à faire)<br>
-developpement du back (à faire)<br>
+developpement du front (en cours)<br>
+developpement du back (en cours)<br>
 mise en ligne (à faire)<br>
 creation des slides de la présentation orale (à faire)<br>
 remplir les "post mortem" (à faire)
