@@ -29,7 +29,7 @@ Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données rel
 <br>
 MCD
 
-<br>img test
+<br><img width="630" alt="Capture_decran_2023-12-11_a_16 47 51" src="https://github.com/LsR-pop/ProjetAPI/assets/108394013/65f94cda-2295-4dab-b943-d7a30e403f70">
 
 <br>
 POINT D'AVANCEMENT (checklist à mettre à jour)
@@ -38,8 +38,8 @@ POINT D'AVANCEMENT (checklist à mettre à jour)
 choix de la stack technique (fait)<br>
 justification de la stack technique (en cours)<br>
 extraction du fichier json (fait)<br>
-creation du MCD (en cours)<br>
-creation des wireframes (en cours)<br>
+creation du MCD (fait)<br>
+creation des wireframes (fait)<br>
 developpement du front (à faire)<br>
 developpement du back (à faire)<br>
 mise en ligne (à faire)<br>
