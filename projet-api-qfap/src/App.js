@@ -20,6 +20,7 @@ function App() {
       >
         Filter
       </p>
+      </div>
       <div
         style={{
           color: "#071F31",
