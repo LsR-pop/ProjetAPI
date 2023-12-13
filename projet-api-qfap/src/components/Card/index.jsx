@@ -2,7 +2,7 @@ import Tag from "../Tag";
 
 function Card() {
   return (
-    <div className="flex flex-column ">
+    <div className="flex flex-column">
       <div>
         <img
           className="w-78 h-96 mb-4 rounded-3xl border-solid border-8 border-primary-blue border-opacity-20"
