@@ -14,6 +14,7 @@ function App() {
           fontWeight: "700",
           lineHeight: "normal",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Filter
@@ -26,6 +27,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Mots clés
@@ -41,6 +43,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
+          marginLeft: "90px"
         }}
       >
         <div
@@ -160,6 +163,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              marginBottom: "20px"
             }}
           >
             Sport
@@ -174,6 +178,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Audience
@@ -189,6 +194,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
+          marginLeft: "90px"
         }}
       >
         <div
@@ -308,6 +314,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              marginBottom: "20px"
             }}
           >
             Sport
@@ -322,6 +329,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Tarifs
@@ -337,6 +345,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
+          marginLeft: "90px"
         }}
       >
         <div
@@ -456,6 +465,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              marginBottom: "20px"
             }}
           >
             Sport
@@ -470,6 +480,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Dates
@@ -485,6 +496,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
+          marginLeft: "90px"
         }}
       >
         <div
@@ -604,6 +616,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              marginBottom: "20px"
             }}
           >
             Sport
@@ -618,6 +631,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
+          marginLeft: "100px"
         }}
       >
         Accessibilité
@@ -633,6 +647,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
+          marginLeft: "90px"
         }}
       >
         <div
