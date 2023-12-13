@@ -1,14 +1,19 @@
+import React, {useState} from "react";
 import "./App.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 function App() {
+  const [isDanseClicked, setIsDanseClicked] = useState(false);
+  const [isTheatreClicked, setIsTheatreClicked] = useState(false);
+  const [isLoisirClicked, setIsLoisirClicked] = useState(false);
+  const [isPhotosClicked, setIsPhotosClicked] = useState(false);
+  const [isSportClicked, setIsSportClicked] = useState (false);
+
   return (
     <div className="App">
-      <div style={{ display: "flex", justifyContent: "center" }}>
       <p
         style={{
-          color: "#071F31",
           fontFamily: "Outfit",
           fontSize: "32px",
           fontStyle: "normal",
@@ -18,12 +23,11 @@ function App() {
           marginLeft: "100px"
         }}
       >
-        Filter
+        Filters
+      <br />
       </p>
-      </div>
       <div
         style={{
-          color: "#071F31",
           fontSize: 16,
           fontFamily: "Outfit",
           fontWeight: "600",
@@ -65,13 +69,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 58,
-              color: "#354ACE",
+             width: 58,
+              color: isDanseClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsDanseClicked(!isDanseClicked)}
           >
             Danse
           </div>
@@ -88,16 +94,18 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
+              color: isTheatreClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsTheatreClicked(!isTheatreClicked)}
           >
             Théâtre
           </div>
-        </div>
+        </div> 
         <div
           style={{
             justifyContent: "flex-start",
@@ -115,13 +123,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isLoisirClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsLoisirClicked(!isLoisirClicked)}
           >
             Loisirs
           </div>
@@ -137,13 +147,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isPhotosClicked? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsPhotosClicked(!isPhotosClicked)}
           >
             Photos
           </div>
@@ -159,14 +171,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isSportClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              cursor: "pointer"
             }}
+            onClick={() => setIsSportClicked(!isSportClicked)}
           >
             Sport
           </div>
@@ -217,12 +230,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
-              fontSize: 16,
-              fontFamily: "Outfit",
-              fontWeight: "500",
-              wordWrap: "break-word",
-            }}
+               color: isDanseClicked ? "black" : "#354ACE",
+               fontSize: 16,
+               fontFamily: "Outfit",
+               fontWeight: "500",
+               wordWrap: "break-word",
+               cursor: "pointer"
+             }}
+             onClick={() => setIsDanseClicked(!isDanseClicked)}
           >
             Danse
           </div>
@@ -239,12 +254,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
+              color: isTheatreClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsTheatreClicked(!isTheatreClicked)}
           >
             Théâtre
           </div>
@@ -266,13 +283,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isLoisirClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsLoisirClicked(!isLoisirClicked)}
           >
             Loisirs
           </div>
@@ -283,18 +302,21 @@ function App() {
             alignItems: "flex-start",
             gap: 8,
             display: "inline-flex",
+            cursor: "pointer"
           }}
         >
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isPhotosClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsPhotosClicked(!isPhotosClicked)}
           >
             Photos
           </div>
@@ -310,14 +332,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isSportClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              cursor: "pointer"
             }}
+            onClick={() => setIsSportClicked(!isSportClicked)}
           >
             Sport
           </div>
@@ -368,12 +391,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
-              fontSize: 16,
-              fontFamily: "Outfit",
-              fontWeight: "500",
-              wordWrap: "break-word",
-            }}
+               color: isDanseClicked ? "black" : "#354ACE",
+               fontSize: 16,
+               fontFamily: "Outfit",
+               fontWeight: "500",
+               wordWrap: "break-word",
+               cursor: "pointer"
+             }}
+             onClick={() => setIsDanseClicked(!isDanseClicked)}
           >
             Danse
           </div>
@@ -390,12 +415,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
+              color: isTheatreClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsTheatreClicked(!isTheatreClicked)}
           >
             Théâtre
           </div>
@@ -417,13 +444,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isLoisirClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsLoisirClicked(!isLoisirClicked)}
           >
             Loisirs
           </div>
@@ -439,13 +468,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isPhotosClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsPhotosClicked(!isPhotosClicked)}
           >
             Photos
           </div>
@@ -461,14 +492,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isSportClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              cursor: "pointer"
             }}
+            onClick={() => setIsSportClicked(!isSportClicked)}
           >
             Sport
           </div>
@@ -519,12 +551,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
-              fontSize: 16,
-              fontFamily: "Outfit",
-              fontWeight: "500",
-              wordWrap: "break-word",
-            }}
+               color: isDanseClicked ? "black" : "#354ACE",
+               fontSize: 16,
+               fontFamily: "Outfit",
+               fontWeight: "500",
+               wordWrap: "break-word",
+               cursor: "pointer"
+             }}
+             onClick={() => setIsDanseClicked(!isDanseClicked)}
           >
             Danse
           </div>
@@ -541,12 +575,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
+              color: isTheatreClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsTheatreClicked(!isTheatreClicked)}
           >
             Théâtre
           </div>
@@ -568,13 +604,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isLoisirClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsLoisirClicked(!isLoisirClicked)}
           >
             Loisirs
           </div>
@@ -590,13 +628,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isPhotosClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsPhotosClicked(!isPhotosClicked)}
           >
             Photos
           </div>
@@ -612,14 +652,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isSportClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              cursor: "pointer"
             }}
+            onClick={() => setIsSportClicked(!isSportClicked)}
           >
             Sport
           </div>
@@ -670,12 +711,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
-              fontSize: 16,
-              fontFamily: "Outfit",
-              fontWeight: "500",
-              wordWrap: "break-word",
-            }}
+               color: isDanseClicked ? "black" : "#354ACE",
+               fontSize: 16,
+               fontFamily: "Outfit",
+               fontWeight: "500",
+               wordWrap: "break-word",
+               cursor: "pointer"
+             }}
+             onClick={() => setIsDanseClicked(!isDanseClicked)}
           >
             Danse
           </div>
@@ -692,12 +735,14 @@ function App() {
           <div
             style={{
               width: 58,
-              color: "#354ACE",
+              color: isTheatreClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsTheatreClicked(!isTheatreClicked)}
           >
             Théâtre
           </div>
@@ -719,13 +764,15 @@ function App() {
           ></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isLoisirClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsLoisirClicked(!isLoisirClicked)}
           >
             Loisirs
           </div>
@@ -741,13 +788,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isPhotosClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsPhotosClicked(!isPhotosClicked)}
           >
             Photos
           </div>
@@ -763,13 +812,15 @@ function App() {
           <div style={{ width: 20, height: 20, background: "#354ACE" }}></div>
           <div
             style={{
-              width: 54,
-              color: "#354ACE",
+              width: 58,
+              color: isSportClicked ? "black" : "#354ACE",
               fontSize: 16,
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
+              cursor: "pointer"
             }}
+            onClick={() => setIsSportClicked(!isSportClicked)}
           >
             Sport
           </div>
