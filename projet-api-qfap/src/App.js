@@ -820,7 +820,7 @@ function App() {
               wordWrap: "break-word",
               cursor: "pointer"
             }}
-            onClick={() => setIsSportClicked(!isSportClicked)}
+            onClick={() => setIsSportClicdked(!isSportClicked)}
           >
             Sport
           </div>
