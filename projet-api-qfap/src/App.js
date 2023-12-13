@@ -20,6 +20,7 @@ function App() {
       >
         Filter
       </p>
+      </div>
       <div
         style={{
           color: "#071F31",
@@ -796,7 +797,6 @@ function App() {
           />
         </MapContainer>
       </div>
-    </div>
     </div>
   );
 }
