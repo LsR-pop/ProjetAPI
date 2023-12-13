@@ -22,7 +22,7 @@ function Event() {
                 2 novembre - 31 décembre 2023
               </span>
             </div>
-            <h2 className="text-xl text-textColor font-medium text-5xl text-textColor font-medium mb-6">
+            <h2 className="text-5xl text-textColor font-medium mb-6">
               Exposition Haussmann en capitale
             </h2>
             <div className="flex gap-2 mb-6">
