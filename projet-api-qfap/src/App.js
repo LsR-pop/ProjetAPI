@@ -1,25 +1,25 @@
 import "./App.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
+import Home from "./home.jsx";
 function App() {
   return (
     <div className="App">
       <div style={{ display: "flex", justifyContent: "center" }}>
-      <p
-        style={{
-          color: "#071F31",
-          fontFamily: "Outfit",
-          fontSize: "32px",
-          fontStyle: "normal",
-          fontWeight: "700",
-          lineHeight: "normal",
-          display: "flex",
-          marginLeft: "100px"
-        }}
-      >
-        Filter
-      </p>
+        <p
+          style={{
+            color: "#071F31",
+            fontFamily: "Outfit",
+            fontSize: "32px",
+            fontStyle: "normal",
+            fontWeight: "700",
+            lineHeight: "normal",
+            display: "flex",
+            marginLeft: "100px",
+          }}
+        >
+          Filter
+        </p>
       </div>
       <div
         style={{
@@ -29,7 +29,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
-          marginLeft: "100px"
+          marginLeft: "100px",
         }}
       >
         Mots clés
@@ -45,7 +45,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
-          marginLeft: "90px"
+          marginLeft: "90px",
         }}
       >
         <div
@@ -165,7 +165,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              marginBottom: "20px",
             }}
           >
             Sport
@@ -180,7 +180,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
-          marginLeft: "100px"
+          marginLeft: "100px",
         }}
       >
         Audience
@@ -196,7 +196,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
-          marginLeft: "90px"
+          marginLeft: "90px",
         }}
       >
         <div
@@ -316,7 +316,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              marginBottom: "20px",
             }}
           >
             Sport
@@ -331,7 +331,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
-          marginLeft: "100px"
+          marginLeft: "100px",
         }}
       >
         Tarifs
@@ -347,7 +347,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
-          marginLeft: "90px"
+          marginLeft: "90px",
         }}
       >
         <div
@@ -467,7 +467,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              marginBottom: "20px",
             }}
           >
             Sport
@@ -482,7 +482,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
-          marginLeft: "100px"
+          marginLeft: "100px",
         }}
       >
         Dates
@@ -498,7 +498,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
-          marginLeft: "90px"
+          marginLeft: "90px",
         }}
       >
         <div
@@ -618,7 +618,7 @@ function App() {
               fontFamily: "Outfit",
               fontWeight: "500",
               wordWrap: "break-word",
-              marginBottom: "20px"
+              marginBottom: "20px",
             }}
           >
             Sport
@@ -633,7 +633,7 @@ function App() {
           fontWeight: "600",
           wordWrap: "break-word",
           display: "flex",
-          marginLeft: "100px"
+          marginLeft: "100px",
         }}
       >
         Accessibilité
@@ -649,7 +649,7 @@ function App() {
           alignItems: "flex-start",
           gap: 16,
           display: "inline-flex",
-          marginLeft: "90px"
+          marginLeft: "90px",
         }}
       >
         <div
@@ -797,6 +797,7 @@ function App() {
           />
         </MapContainer>
       </div>
+      <Home></Home>
     </div>
   );
 }
