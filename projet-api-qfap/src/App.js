@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import Home from "./home.jsx";
 function App() {
   return (
-    <div className="App">
+    <div className="App container m-auto">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <p
           style={{
