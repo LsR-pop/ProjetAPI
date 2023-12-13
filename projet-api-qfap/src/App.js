@@ -797,6 +797,7 @@ function App() {
         </MapContainer>
       </div>
     </div>
+    </div>
   );
 }
 
