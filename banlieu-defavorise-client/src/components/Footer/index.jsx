@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <footer>
+    <footer className="bg-slate-400 mt-14 p-12">
       <div className="flex flex-col m-auto">
-        <p>© 2023 - QFAP</p>
+        <p className="self-center text-white">© 2023 - QFAP</p>
         <div className="flex flex-row justify-between">
           <a href="https://ecole-du-digital.com/">
             <img src="./icons/logoEcole.png" alt="" />

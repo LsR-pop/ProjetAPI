@@ -1,11 +1,13 @@
 import SearchBar from "./components/SearchBar/index.jsx";
 import Tag from "./components/Tag/index.jsx";
+import Tag2 from "./components/Tag2/index.jsx";
 import Card from "./components/Card/index.jsx";
 import Filter from "./components/Filter/filter.jsx";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import Footer from "./components/Footer/index.jsx";
 
 function Home() {
   const [data, setData] = useState();
@@ -21,7 +23,9 @@ function Home() {
 
   return (
     <div>
-      <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
+      <a href="/">
+        <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
+      </a>
       <div className="flex flex-row container m-auto mt-24 mb-10 justify-center gap-24 ">
         {/* <img src="./icons/IconLeft.png" alt="" /> */}
         <div className="flex flex-col w-1/3">
@@ -101,7 +105,7 @@ function Home() {
       </div>
       <div className="flex flex-row justify-center gap-6 mb-12">
         <Tag></Tag>
-        <Tag></Tag>
+        <Tag2></Tag2>
       </div>
       <h4 className="text-primary-blue font-medium text-xl text-right mr-32 mb-6">
         Tout voir
@@ -145,6 +149,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
