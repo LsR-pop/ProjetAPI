@@ -1,27 +1,12 @@
 import SearchBar from "../src/components/SearchBar/index.jsx";
 import Tag from "./components/Tag/index.jsx";
 import Card from "./components/Card/index.jsx";
+import Filter from "./components/Filter/filter.jsx";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 
-import { Collapse, Checkbox } from "antd";
-
 function Home() {
-  const { Panel } = Collapse;
-  const accordionStyle = {
-    border: "none",
-    boxShadow: "none",
-  };
-  const customPanelStyle = {
-    border: 0,
-    boxShadow: "none",
-  };
-  const checkboxStyle = {
-    color: "#354ACE",
-    marginBottom: "8px",
-  };
-
   return (
     <div>
       <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
@@ -110,32 +95,11 @@ function Home() {
         Tout voir
       </h4>
       <div className="flex flex-row">
-        <div className="ml-5 xl:w-[200px] sm:w-[100px] md:w-[150px]">
-          <Collapse accordion expandIconPosition="right" style={accordionStyle}>
-            <Panel
-              style={customPanelStyle}
-              header="Mot clés"
-              key="1"
-              className="text-xl text-textColor font-medium"
-            >
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <Checkbox
-                  style={checkboxStyle}
-                  className="font-regular font-medium text-base custom-checkbox"
-                >
-                  <span className="custom-checkmark"></span>
-                  Option 1
-                </Checkbox>
-                <Checkbox
-                  style={checkboxStyle}
-                  className="font-regular font-medium text-base custom-checkbox"
-                >
-                  <span className="custom-checkmark"></span>
-                  Option 2
-                </Checkbox>
-              </div>
-            </Panel>
-          </Collapse>
+        <div>
+          <h2 className="text-5xl text-textColor font-medium mb-6 ml-5">
+            Filtres
+          </h2>
+          <Filter />
         </div>
         <div>
           <div className="flex flex-row gap-12 flex-wrap ml-24 mb-12">
@@ -148,6 +112,9 @@ function Home() {
             <Tag></Tag>
             <Tag></Tag>
           </div>
+          <h2 className="text-5xl text-textColor font-medium mb-6">
+            Carte de Paris
+          </h2>
           <div className="mb-6">
             <MapContainer
               style={{
