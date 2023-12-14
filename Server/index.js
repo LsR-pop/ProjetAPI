@@ -185,6 +185,76 @@ app.get("/api/events/addresses/:id", (req, res) => {
   });
 });
 
+app.get("/api/events/:id", (req, res) => {
+  Event.findByPk(req.params.id, {
+    include: [
+      {
+        model: Tag,
+        as: "tags",
+        through: { attributes: [] },
+      },
+      {
+        model: AccessType,
+        as: "accessType",
+      },
+      {
+        model: PriceType,
+        as: "priceType",
+      },
+      {
+        model: Audience,
+        as: "audience",
+      },
+      {
+        model: Group,
+        as: "group",
+      },
+      {
+        model: Address,
+        as: "address",
+      },
+    ],
+  }).then((event) => {
+    res.json(event);
+  });
+});
+
+app.get("/api/events/tags", (req, res) => {
+  Tag.findAll().then((tags) => {
+    res.json(tags);
+  });
+});
+
+app.get("/api/events/accessTypes", (req, res) => {
+  AccessType.findAll().then((accessTypes) => {
+    res.json(accessTypes);
+  });
+});
+
+app.get("/api/events/priceTypes", (req, res) => {
+  PriceType.findAll().then((priceTypes) => {
+    res.json(priceTypes);
+  });
+});
+
+app.get("/api/events/audiences", (req, res) => {
+  Audience.findAll().then((audiences) => {
+    res.json(audiences);
+  });
+});
+
+app.get("/api/events/groups", (req, res) => {
+  Group.findAll().then((groups) => {
+    res.json(groups);
+  });
+});
+
+app.get("/api/events/addresses", (req, res) => {
+  Address.findAll().then((addresses) => {
+    res.json(addresses);
+  });
+});
+
 app.listen(8080, () => {
   console.log("Server running on port 8080");
 });
