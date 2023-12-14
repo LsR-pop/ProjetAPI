@@ -66,7 +66,7 @@ function Home() {
             alt=""
           />
           <img
-            className="sm:w-4 xl:w-12  iconAnimate5"
+            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 iconAnimate5"
             src="./icons/icon11.svg"
             alt=""
           />
