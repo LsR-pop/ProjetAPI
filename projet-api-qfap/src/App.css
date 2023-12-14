@@ -51,23 +51,6 @@
   margin-top: 5px;
 }
 
-.custom-checkbox input[type="checkbox"]:checked + span {
-  background-color: #354ace;
-  border-color: #354ace;
-}
-
-.custom-checkbox input[type="checkbox"] {
-  border: 2px solid #354ace;
-}
-
-.custom-checkbox input[type="checkbox"]:hover {
-  border-color: #354ace;
-}
-
-.custom-checkbox input[type="checkbox"]:checked {
-  border-color: #354ace;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
