@@ -1,9 +1,8 @@
 const { readFileSync } = require("fs");
 const { Sequelize, DataTypes, Model } = require("sequelize");
+const path = require("path");
 
-const raw = readFileSync(
-  "/Users/leobckt/Desktop/Dev/B3/ProjetAPI/Server/Data/que-faire-a-paris.json"
-);
+const raw = readFileSync(path.resolve(__dirname, "que-faire-a-paris.json"));
 
 let data = JSON.parse(raw);
 
