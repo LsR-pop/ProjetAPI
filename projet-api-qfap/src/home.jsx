@@ -46,33 +46,39 @@ function Home() {
         </div>
         <div className="flex flex-col w-1/3">
           <img
-            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 iconAnimate"
-            src="./icons/icon1.svg"
+            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-start iconAnimate"
+            src="./icons/icon7.svg"
             alt=""
           />
           <img
-            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-end iconAnimate2"
-            src="./icons/icon2.svg"
+            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-end  iconAnimate2"
+            src="./icons/icon8.svg"
             alt=""
           />
           <img
             className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-center iconAnimate3"
-            src="./icons/icon3.svg"
+            src="./icons/icon9.svg"
             alt=""
           />
           <img
             className="sm:w-4 md:w-8 lg:w-10 xl:w-12 iconAnimate4"
-            src="./icons/icon4.svg"
+            src="./icons/icon10.svg"
             alt=""
           />
           <img
-            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-end iconAnimate5"
-            src="./icons/icon5.svg"
+            className="sm:w-4 xl:w-12  iconAnimate5"
+            src="./icons/icon11.svg"
             alt=""
           />
+          <img
+            className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-end  iconAnimate6"
+            src="./icons/icon12.svg"
+            alt=""
+          />
+
           <img
             className="sm:w-4 md:w-8 lg:w-10 xl:w-12 self-center iconAnimate6"
-            src="./icons/icon6.svg"
+            src="./icons/icon13.svg"
             alt=""
           />
         </div>
