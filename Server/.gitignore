@@ -1,6 +1,7 @@
 # Dossiers
 node_modules/
 dist/
+.DS_Store
 
 # Fichiers
 .env
