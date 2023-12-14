@@ -76,8 +76,8 @@ function Event() {
         <h2 className="mb-5 text-xl text-textColor font-medium">Endroit</h2>
         <MapContainer
           style={{
-            height: "515px",
-            width: "1044px",
+            height: "70vh",
+            width: "80vw",
             borderRadius: "25px",
           }}
           center={[48.866667, 2.333333]}
