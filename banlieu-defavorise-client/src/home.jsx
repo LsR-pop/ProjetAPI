@@ -5,8 +5,20 @@ import Filter from "./components/Filter/filter.jsx";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
+import React, { useState, useEffect } from "react";
 
 function Home() {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("/api/events")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      });
+  }, []);
+
   return (
     <div>
       <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
@@ -102,10 +114,15 @@ function Home() {
           <Filter />
         </div>
         <div>
+          {data &&
+            data.results.map((event) => {
+              return (
+                <div>
+                  <h1>{event.title}</h1>
+                </div>
+              );
+            })}
           <div className="flex flex-row gap-12 flex-wrap ml-24 mb-12">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
             <Card></Card>
           </div>
           <div className="flex flex-row justify-center gap-6 mb-24">
