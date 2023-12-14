@@ -1,4 +1,4 @@
-import SearchBar from "../src/components/SearchBar/index.jsx";
+import SearchBar from "./components/SearchBar/index.jsx";
 import Tag from "./components/Tag/index.jsx";
 import Card from "./components/Card/index.jsx";
 import Filter from "./components/Filter/filter.jsx";
@@ -118,8 +118,8 @@ function Home() {
           <div className="mb-6">
             <MapContainer
               style={{
-                height: "515px",
-                width: "1044px",
+                height: "70vh",
+                width: "80vw",
                 borderRadius: "25px",
               }}
               center={[48.866667, 2.333333]}
