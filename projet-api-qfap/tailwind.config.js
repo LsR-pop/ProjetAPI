@@ -26,6 +26,10 @@ module.exports = {
         100: "27.938rem",
       },
 
+      screens: {
+        mobile: "375px",
+      },
+
       plugins: [],
     },
   },

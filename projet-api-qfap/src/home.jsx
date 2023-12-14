@@ -26,7 +26,6 @@ function Home() {
     <div>
       <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
       <div className="flex flex-row container m-auto mt-24 mb-10 justify-center gap-24 ">
-        {/* <img src="./icons/IconLeft.png" alt="" /> */}
         <div className="flex flex-col w-1/3">
           <img
             className="sm:w-4 md:w-8 lg:w-10 xl:w-12 iconAnimate"

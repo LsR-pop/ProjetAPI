@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Card from "./components/Card/index";
+import Footer from "./components/Footer/index";
 
 function Event() {
   return (
@@ -9,7 +10,7 @@ function Event() {
       <div className="flex mb-24">
         <div className=" ml-32 ">
           <img
-            className="w-100 h-100 rounded-3xl border-solid border-8 border-primary-blue border-opacity-20"
+            className="w-full min-w-[200px] h-auto rounded-3xl border-solid border-8 border-primary-blue border-opacity-20"
             src="images/testImg.jpg"
             alt=""
           />
@@ -96,6 +97,7 @@ function Event() {
         </h2>
         <Card />
       </div>
+      <Footer></Footer>
     </div>
   );
 }
