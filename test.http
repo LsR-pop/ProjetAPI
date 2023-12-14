@@ -1,0 +1,5 @@
+###
+get http://localhost:8080/api/events/
+
+###
+get http://localhost:8080/api/events/?page=21&limit=100
