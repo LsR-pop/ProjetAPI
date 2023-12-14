@@ -114,16 +114,11 @@ function Home() {
           <Filter />
         </div>
         <div>
-          {data &&
-            data.results.map((event) => {
-              return (
-                <div>
-                  <h1>{event.title}</h1>
-                </div>
-              );
-            })}
           <div className="flex flex-row gap-12 flex-wrap ml-24 mb-12">
-            <Card></Card>
+            {data &&
+              data.results.map((event) => {
+                return <Card key={event.id} eventData={event} />;
+              })}
           </div>
           <div className="flex flex-row justify-center gap-6 mb-24">
             <Tag></Tag>
