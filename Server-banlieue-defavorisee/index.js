@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
 const { Op } = require("sequelize");
 const {
+
   Event,
   Tag,
   EventTag,
@@ -12,6 +14,7 @@ const {
   Group,
   Address,
 } = require("./Data/models");
+
 
 // const eventsRouter = require("./routes/Events");
 // const tagsRouter = require("./routes/Tags");
@@ -95,10 +98,12 @@ app.get("/api/tags/:id", (req, res) => {
   });
 });
 
+
 app.get("/api/events", (req, res) => {
   let page = parseInt(req.query.page) || 1;
   let limit = parseInt(req.query.limit) || 3;
   let offset = limit * (page - 1);
+
 
   let group_id = req.query.group_id;
   let tag_ids = req.query.tag_ids;
@@ -107,6 +112,7 @@ app.get("/api/events", (req, res) => {
   let audience_id = req.query.audience_id;
   let addresse_id = req.query.addresse_id;
 
+
   let next = "/api/events?page=" + (page + 1) + "&limit=" + limit;
   let prev = "/api/events?page=" + (page - 1) + "&limit=" + limit;
   if (page == 1) {
@@ -114,6 +120,7 @@ app.get("/api/events", (req, res) => {
   }
 
   let count = 0;
+
 
   let whereClause = {};
   if (group_id) whereClause.group_id = group_id;
@@ -126,15 +133,16 @@ app.get("/api/events", (req, res) => {
     offset: offset,
     limit: limit,
     where: whereClause,
-
     include: [
       {
         model: Tag,
         as: "tags",
+
         through: { model: EventTag, attributes: [] },
         // where: {
         //   id: { [Op.in]: tag_ids },
         // },
+
       },
       {
         model: AccessType,
@@ -158,7 +166,9 @@ app.get("/api/events", (req, res) => {
       },
     ],
   }).then((events) => {
+
     console.log(events);
+
 
     if (events.length < limit) {
       next = null;
@@ -185,7 +195,9 @@ app.get("/api/events/:id", (req, res) => {
       {
         model: Tag,
         as: "tags",
+
         through: { model: EventTag, attributes: [] },
+
       },
       {
         model: AccessType,
@@ -209,6 +221,7 @@ app.get("/api/events/:id", (req, res) => {
       },
     ],
   }).then((event) => {
+
     return event.getTags().then((tags) => {
       event.tags = tags;
       res.json(event);

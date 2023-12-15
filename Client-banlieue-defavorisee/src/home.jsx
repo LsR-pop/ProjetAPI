@@ -1,3 +1,4 @@
+
 import SearchBar from "./components/SearchBar/SearchBar.jsx";
 // import Tag from "./components/Tag/Tag.jsx";
 import Card from "./components/Card/EventCard.jsx";
@@ -25,20 +26,25 @@ function Home() {
     fetch("/api/events")
       .then((response) => response.json())
       .then((data) => {
+
         setEvents(data.results);
+
         console.log(data);
       });
   }, []);
 
   return (
     <div>
+
       <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
       <div className="flex flex-row container m-auto mt-24 mb-10 justify-center gap-24 ">
         <FloatingIcons icons={[1, 2, 3, 4, 5, 6]} />
+
         <div className="flex flex-col items-center gap-10">
           <img className="w-64 h-24" src="./icons/logoQFAP.svg" alt="" />
           <SearchBar />
         </div>
+
         <FloatingIcons icons={[7, 8, 9, 11, 12, 13]} />
       </div>
       <div className="flex flex-row justify-center gap-6 mb-12">
@@ -53,6 +59,7 @@ function Home() {
           <h2 className="text-5xl text-textColor font-medium mb-6 ml-5">
             Filtres
           </h2>
+
           <Filter apiRoutes={apiRoutes} />
         </div>
         <div>
@@ -63,6 +70,7 @@ function Home() {
           <div className="flex flex-row justify-center gap-6 mb-24">
             {/* <Tag></Tag>
             <Tag></Tag> */}
+
           </div>
           <h2 className="text-5xl text-textColor font-medium mb-6">
             Carte de Paris
@@ -70,8 +78,10 @@ function Home() {
           <div className="mb-6">
             <MapContainer
               style={{
+
                 height: "50vh",
                 width: "50vw",
+
                 borderRadius: "25px",
               }}
               center={[48.866667, 2.333333]}
@@ -85,6 +95,9 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <Footer></Footer>
+
     </div>
   );
 }

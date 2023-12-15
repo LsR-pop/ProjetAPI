@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 const { Op } = require("sequelize");
 const {
   Event,
@@ -130,5 +131,6 @@ router.get("/:id", (req, res) => {
     });
   });
 });
+
 
 module.exports = router;

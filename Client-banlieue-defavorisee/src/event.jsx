@@ -2,10 +2,15 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Card from "./components/Card/index";
 
+import Footer from "./components/Footer/index.jsx";
+
+
 function Event() {
   return (
     <div>
-      <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
+
+        <img src="icons/logoQFAP.svg" alt="" className="mt-12 mb-9 ml-32" />
+
       <div className="flex mb-24">
         <div className=" ml-32 ">
           <img
@@ -19,7 +24,9 @@ function Event() {
             <div className="flex flex-row gap-2 mb-4">
               <img src="icons/iconCalendar.svg" alt="" />
               <span className="text-sm text-secondaryRed font-medium">
+
                 2 novembre - 31 décembre 2023
+
               </span>
             </div>
             <h2 className="text-5xl text-textColor font-medium mb-6">
@@ -96,6 +103,9 @@ function Event() {
         </h2>
         <Card />
       </div>
+
+      <Footer></Footer>
+
     </div>
   );
 }
