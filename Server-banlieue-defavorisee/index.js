@@ -23,6 +23,9 @@ const {
 
 app.use(cors());
 
+const PORT = 8100;
+const IP = "::";
+
 app.get("/api/accessTypes", (req, res) => {
   AccessType.findAll().then((accessTypes) => {
     res.json(accessTypes);
@@ -179,7 +182,7 @@ app.get("/api/events", (req, res) => {
   });
 });
 
-app.get("/api/events/:id", (req, res) => {
+app.get("/api/event/:id", (req, res) => {
   Event.findByPk(req.params.id, {
     include: [
       {
@@ -225,5 +228,5 @@ app.get("/api/events/:id", (req, res) => {
 // app.use("/api/groups", groupsRouter);
 
 app.listen(8080, () => {
-  console.log("Server running on port 8080");
+  console.log(`Server running at http://${IP}:${PORT}/`);
 });

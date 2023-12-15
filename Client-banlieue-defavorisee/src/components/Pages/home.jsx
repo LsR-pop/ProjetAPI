@@ -1,14 +1,16 @@
-import SearchBar from "./components/SearchBar/SearchBar.jsx";
-// import Tag from "./components/Tag/Tag.jsx";
-import Card from "./components/Card/EventCard.jsx";
-import Filter from "./components/Filter/Filter.jsx";
-import FloatingIcons from "./components/Icons/FloatingIcon.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
+import Tag from "../Tag/Tag.jsx";
+import EventCard from "../Card/EventCard.jsx";
+import Filter from "../Filter/Filter.jsx";
+import FloatingIcons from "../Icons/FloatingIcon.jsx";
 
 import React, { useState, useEffect } from "react";
 
 import { MapContainer, TileLayer } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import "./App.css";
+import "./home.css";
+import Footer from "../Footer/Footer.jsx";
 
 const apiRoutes = [
   { path: "/api/tags", name: "Mots-clés" },
@@ -42,8 +44,8 @@ function Home() {
         <FloatingIcons icons={[7, 8, 9, 11, 12, 13]} />
       </div>
       <div className="flex flex-row justify-center gap-6 mb-12">
-        {/* <Tag></Tag>
-        <Tag></Tag> */}
+        <Tag tag="Nouveaux"></Tag>
+        <Tag tag="Bientôt Fini"></Tag>
       </div>
       <h4 className="text-primary-blue font-medium text-xl text-right mr-32 mb-6">
         Tout voir
@@ -58,7 +60,7 @@ function Home() {
         <div>
           <div className="flex flex-row gap-12 flex-wrap ml-24 mb-12">
             {events &&
-              events.map((event) => <Card key={event.id} event={event} />)}
+              events.map((event) => <EventCard key={event.id} event={event} />)}
           </div>
           <div className="flex flex-row justify-center gap-6 mb-24">
             {/* <Tag></Tag>
@@ -67,6 +69,7 @@ function Home() {
           <h2 className="text-5xl text-textColor font-medium mb-6">
             Carte de Paris
           </h2>
+
           <div className="mb-6">
             <MapContainer
               style={{
@@ -81,10 +84,20 @@ function Home() {
                 attribution="Google Maps"
                 url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
               />
+              {events &&
+                events.map((event) => (
+                  <Marker position={[event.lat, event.lon]} key={event.id}>
+                    <Popup>
+                      {event.title}
+                      <img src={event.cover_url} alt="" />
+                    </Popup>
+                  </Marker>
+                ))}
             </MapContainer>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
