@@ -26,7 +26,7 @@ Nous avons choisi MYSQL comme SGBDR (système de gestion de base de données rel
 
 Nous avons choisi Tailwind CSS comme framework CSS car il est open source. La fonctionnalité principale de cette bibliothèque est, contrairement à d'autres frameworks CSS comme Bootstrap, qu'elle ne procure pas une série de classes prédéfinies pour des éléments tels que des boutons ou des tables. À la place, Tailwind crée une liste de classes CSS « utilitaires » pouvant être utilisés pour ajouter un style à chaque élément en les mélangeant et en les agençant.
 
-(Nous avons choisi ORM? car)
+Nous avons choisi Sequelize comme ORM car l'hébergeur de Prisma est trop lourd.
 
 <br>
 MCD
@@ -42,17 +42,22 @@ justification de la stack technique (fait)<br>
 extraction du fichier json (fait)<br>
 creation du MCD (fait)<br>
 creation des wireframes (fait)<br>
-developpement du front (en cours)<br>
-developpement du back (en cours)<br>
-mise en ligne (à faire)<br>
-creation des slides de la présentation orale (à faire)<br>
-remplir les "post mortem" (à faire)
+developpement du front (fait)<br>
+developpement du back (fait)<br>
+mise en ligne (fait)<br>
+remplir les "post mortem" (fait)
 
 <br>
 POST MORTEM
 
 <br>Commentaires du projet :
+- le temps fut court suite à un manque de coordination sur le début de la semaine qui nous à fait perdre du temps
 
-Nos difficultés rencontrés :
+Nos difficultés rencontrés : <br>
+- Les différences de connaissance dans les technologies utilisers entre nos différents membres du groupe<br>
+- Les différents merges github qui nous ont apporter beaucoup de conflits<br>
+- Difficulté à appréhender un ORM comme Sequelize
 
-Ce que l'on a pas pu faire et pourquoi :
+Ce que l'on a pas pu faire et pourquoi :<br>
+- la searchbar : manque de temps suite à nos différents échec et bug rencontrer sur d'autre tache prioritaire<br>
+- les filtres : manque de temps suite à nos différents échec et bug rencontrer sur d'autre tache prioritaire
