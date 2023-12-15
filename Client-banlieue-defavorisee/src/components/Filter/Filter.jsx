@@ -1,7 +1,9 @@
 import "./filter.css";
-import { Collapse, Checkbox } from "antd";
+import { Collapse } from "antd";
+import React, { useState, useEffect } from "react";
+import CheckBox from "./CheckBox.jsx";
 
-function Filter() {
+function Filter({ apiRoutes }) {
   const { Panel } = Collapse;
   const accordionStyle = {
     border: "none",
@@ -11,37 +13,44 @@ function Filter() {
     border: 0,
     boxShadow: "none",
   };
-  const checkboxStyle = {
-    color: "#354ACE",
-    marginBottom: "8px",
-  };
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const newData = {};
+      for (const route of apiRoutes) {
+        const response = await fetch(route.path);
+        const apiData = await response.json();
+        newData[route.name] = apiData;
+      }
+      setData(newData);
+    };
+
+    fetchData();
+  }, [apiRoutes]);
 
   return (
     <div className="ml-5 xl:w-[200px] sm:w-[100px] md:w-[150px]">
       <Collapse accordion expandIconPosition="right" style={accordionStyle}>
-        <Panel
-          style={customPanelStyle}
-          header="Mot clés"
-          key="1"
-          className="text-xl text-textColor font-medium"
-        >
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <Checkbox
-              style={checkboxStyle}
-              className="font-regular font-medium text-base custom-checkbox"
-            >
-              <span className="custom-checkmark"></span>
-              Option 1
-            </Checkbox>
-            <Checkbox
-              style={checkboxStyle}
-              className="font-regular font-medium text-base custom-checkbox"
-            >
-              <span className="custom-checkmark"></span>
-              Option 2
-            </Checkbox>
-          </div>
-        </Panel>
+
+        {apiRoutes.map((route, index) => (
+          <Panel
+            key={index}
+            style={customPanelStyle}
+            header={route.name}
+            className="text-xl text-textColor font-medium"
+          >
+            {data[route.name] ? (
+              data[route.name].map((item, id) => (
+                <CheckBox key={id} data={item} />
+              ))
+            ) : (
+              <p>loading...</p>
+            )}
+          </Panel>
+        ))}
+
       </Collapse>
     </div>
   );
