@@ -1,3 +1,4 @@
+
 const { Sequelize, DataTypes, Model } = require("sequelize");
 
 const sequelize = new Sequelize(
@@ -185,9 +186,11 @@ Event.init(
     description: {
       type: DataTypes.TEXT,
     },
+
     cover_url: {
       type: DataTypes.STRING,
     },
+
     date_start: {
       type: DataTypes.DATE,
     },

@@ -33,6 +33,7 @@ function Filter({ apiRoutes }) {
   return (
     <div className="ml-5 xl:w-[200px] sm:w-[100px] md:w-[150px]">
       <Collapse accordion expandIconPosition="right" style={accordionStyle}>
+
         {apiRoutes.map((route, index) => (
           <Panel
             key={index}
@@ -49,6 +50,7 @@ function Filter({ apiRoutes }) {
             )}
           </Panel>
         ))}
+
       </Collapse>
     </div>
   );
