@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
+const { Op } = require("sequelize");
 const {
-  Sequelize,
+
   Event,
   Tag,
   EventTag,
@@ -12,14 +14,104 @@ const {
   Group,
   Address,
 } = require("./Data/models");
-const e = require("express");
+
+
+// const eventsRouter = require("./routes/Events");
+// const tagsRouter = require("./routes/Tags");
+// const accessTypesRouter = require("./routes/AccessTypes");
+// const audiencesRouter = require("./routes/Audiences");
+// const priceTypesRouter = require("./routes/PriceTypes");
+// const addressesRouter = require("./routes/Addresses");
+// const groupsRouter = require("./routes/Groups");
 
 app.use(cors());
+
+app.get("/api/accessTypes", (req, res) => {
+  AccessType.findAll().then((accessTypes) => {
+    res.json(accessTypes);
+  });
+});
+
+app.get("/api/accessTypes/:id", (req, res) => {
+  AccessType.findByPk(req.params.id).then((accessType) => {
+    res.json(accessType);
+  });
+});
+
+app.get("/api/adresses", (req, res) => {
+  Address.findAll().then((addresses) => {
+    res.json(addresses);
+  });
+});
+
+app.get("/api/adresses/:id", (req, res) => {
+  Address.findByPk(req.params.id).then((address) => {
+    res.json(address);
+  });
+});
+
+app.get("/api/audiences", (req, res) => {
+  Audience.findAll().then((audiences) => {
+    res.json(audiences);
+  });
+});
+
+app.get("/api/audiences/:id", (req, res) => {
+  Audience.findByPk(req.params.id).then((audience) => {
+    res.json(audience);
+  });
+});
+
+app.get("/api/groups", (req, res) => {
+  Group.findAll().then((groups) => {
+    res.json(groups);
+  });
+});
+
+app.get("/api/groups/:id", (req, res) => {
+  Group.findByPk(req.params.id).then((group) => {
+    res.json(group);
+  });
+});
+
+app.get("/api/priceTypes", (req, res) => {
+  PriceType.findAll().then((priceTypes) => {
+    res.json(priceTypes);
+  });
+});
+
+app.get("/api/priceTypes/:id", (req, res) => {
+  PriceType.findByPk(req.params.id).then((priceType) => {
+    res.json(priceType);
+  });
+});
+
+app.get("/api/tags", (req, res) => {
+  Tag.findAll().then((tags) => {
+    res.json(tags);
+  });
+});
+
+app.get("/api/tags/:id", (req, res) => {
+  Tag.findByPk(req.params.id).then((tag) => {
+    res.json(tag);
+  });
+});
+
 
 app.get("/api/events", (req, res) => {
   let page = parseInt(req.query.page) || 1;
   let limit = parseInt(req.query.limit) || 3;
   let offset = limit * (page - 1);
+
+
+  let group_id = req.query.group_id;
+  let tag_ids = req.query.tag_ids;
+  let accessType_id = req.query.accessType_id;
+  let priceType_id = req.query.priceType_id;
+  let audience_id = req.query.audience_id;
+  let addresse_id = req.query.addresse_id;
+
 
   let next = "/api/events?page=" + (page + 1) + "&limit=" + limit;
   let prev = "/api/events?page=" + (page - 1) + "&limit=" + limit;
@@ -29,14 +121,28 @@ app.get("/api/events", (req, res) => {
 
   let count = 0;
 
+
+  let whereClause = {};
+  if (group_id) whereClause.group_id = group_id;
+  if (accessType_id) whereClause.accessType_id = accessType_id;
+  if (priceType_id) whereClause.priceType_id = priceType_id;
+  if (audience_id) whereClause.audience_id = audience_id;
+  if (addresse_id) whereClause.addresse_id = addresse_id;
+
   Event.findAll({
     offset: offset,
     limit: limit,
+    where: whereClause,
     include: [
       {
         model: Tag,
         as: "tags",
-        through: { attributes: [] },
+
+        through: { model: EventTag, attributes: [] },
+        // where: {
+        //   id: { [Op.in]: tag_ids },
+        // },
+
       },
       {
         model: AccessType,
@@ -60,6 +166,10 @@ app.get("/api/events", (req, res) => {
       },
     ],
   }).then((events) => {
+
+    console.log(events);
+
+
     if (events.length < limit) {
       next = null;
     }
@@ -85,7 +195,8 @@ app.get("/api/events/:id", (req, res) => {
       {
         model: Tag,
         as: "tags",
-        through: { attributes: [] },
+        through: { model: EventTag, attributes: [] },
+
       },
       {
         model: AccessType,
@@ -109,151 +220,22 @@ app.get("/api/events/:id", (req, res) => {
       },
     ],
   }).then((event) => {
-    res.json(event);
+
+    return event.getTags().then((tags) => {
+      event.tags = tags;
+      res.json(event);
+    });
   });
 });
 
-app.get("/api/events/tags", (req, res) => {
-  Tag.findAll().then((tags) => {
-    res.json(tags);
-  });
-});
+// app.use("/api/events", eventsRouter);
+// app.use("/api/tags", tagsRouter);
+// app.use("/api/accessTypes", accessTypesRouter);
+// app.use("/api/audiences", audiencesRouter);
+// app.use("/api/priceTypes", priceTypesRouter);
+// app.use("/api/addresses", addressesRouter);
+// app.use("/api/groups", groupsRouter);
 
-app.get("/api/events/tags/:id", (req, res) => {
-  Tag.findByPk(req.params.id).then((tag) => {
-    res.json(tag);
-  });
-});
-
-app.get("/api/events/accessTypes", (req, res) => {
-  AccessType.findAll().then((accessTypes) => {
-    res.json(accessTypes);
-  });
-});
-
-app.get("/api/events/accessTypes/:id", (req, res) => {
-  AccessType.findByPk(req.params.id).then((accessType) => {
-    res.json(accessType);
-  });
-});
-
-app.get("/api/events/priceTypes", (req, res) => {
-  PriceType.findAll().then((priceTypes) => {
-    res.json(priceTypes);
-  });
-});
-
-app.get("/api/events/priceTypes/:id", (req, res) => {
-  PriceType.findByPk(req.params.id).then((priceType) => {
-    res.json(priceType);
-  });
-});
-
-app.get("/api/events/audiences", (req, res) => {
-  Audience.findAll().then((audiences) => {
-    res.json(audiences);
-  });
-});
-
-app.get("/api/events/audiences/:id", (req, res) => {
-  Audience.findByPk(req.params.id).then((audience) => {
-    res.json(audience);
-  });
-});
-
-app.get("/api/events/groups", (req, res) => {
-  Group.findAll().then((groups) => {
-    res.json(groups);
-  });
-});
-
-app.get("/api/events/groups/:id", (req, res) => {
-  Group.findByPk(req.params.id).then((group) => {
-    res.json(group);
-  });
-});
-
-app.get("/api/events/addresses", (req, res) => {
-  Address.findAll().then((addresses) => {
-    res.json(addresses);
-  });
-});
-
-app.get("/api/events/addresses/:id", (req, res) => {
-  Address.findByPk(req.params.id).then((address) => {
-    res.json(address);
-  });
-});
-
-app.get("/api/events/:id", (req, res) => {
-  Event.findByPk(req.params.id, {
-    include: [
-      {
-        model: Tag,
-        as: "tags",
-        through: { attributes: [] },
-      },
-      {
-        model: AccessType,
-        as: "accessType",
-      },
-      {
-        model: PriceType,
-        as: "priceType",
-      },
-      {
-        model: Audience,
-        as: "audience",
-      },
-      {
-        model: Group,
-        as: "group",
-      },
-      {
-        model: Address,
-        as: "address",
-      },
-    ],
-  }).then((event) => {
-    res.json(event);
-  });
-});
-
-app.get("/api/events/tags", (req, res) => {
-  Tag.findAll().then((tags) => {
-    res.json(tags);
-  });
-});
-
-app.get("/api/events/accessTypes", (req, res) => {
-  AccessType.findAll().then((accessTypes) => {
-    res.json(accessTypes);
-  });
-});
-
-app.get("/api/events/priceTypes", (req, res) => {
-  PriceType.findAll().then((priceTypes) => {
-    res.json(priceTypes);
-  });
-});
-
-app.get("/api/events/audiences", (req, res) => {
-  Audience.findAll().then((audiences) => {
-    res.json(audiences);
-  });
-});
-
-app.get("/api/events/groups", (req, res) => {
-  Group.findAll().then((groups) => {
-    res.json(groups);
-  });
-});
-
-app.get("/api/events/addresses", (req, res) => {
-  Address.findAll().then((addresses) => {
-    res.json(addresses);
-  });
-});
 
 app.listen(8080, () => {
   console.log("Server running on port 8080");
