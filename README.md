@@ -51,6 +51,7 @@ remplir les "post mortem" (fait)
 POST MORTEM
 
 <br>Commentaires du projet :
+- le temps fut court suite à un manque de coordination sur le début de la semaine qui nous à fait perdre du temps
 
 Nos difficultés rencontrés : <br>
 - Les différences de connaissance dans les technologies utilisers entre nos différents membres du groupe<br>
