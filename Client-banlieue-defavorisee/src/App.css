@@ -6,6 +6,7 @@
   margin-left: 30px;
   margin-top: 5px;
 }
+
 .anim-delay-1 {
   animation-delay: 100ms;
 }
@@ -30,6 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 
 @keyframes floating {

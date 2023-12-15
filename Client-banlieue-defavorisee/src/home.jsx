@@ -60,6 +60,7 @@ function Home() {
             Filtres
           </h2>
 
+
           <Filter apiRoutes={apiRoutes} />
         </div>
         <div>
@@ -91,12 +92,14 @@ function Home() {
                 attribution="Google Maps"
                 url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
               />
+
             </MapContainer>
           </div>
         </div>
       </div>
 
       <Footer></Footer>
+
 
     </div>
   );

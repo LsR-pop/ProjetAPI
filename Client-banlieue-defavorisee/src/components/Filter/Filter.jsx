@@ -13,7 +13,6 @@ function Filter({ apiRoutes }) {
     border: 0,
     boxShadow: "none",
   };
-
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -32,7 +31,6 @@ function Filter({ apiRoutes }) {
 
   return (
     <div className="ml-5 xl:w-[200px] sm:w-[100px] md:w-[150px]">
-      <Collapse accordion expandIconPosition="right" style={accordionStyle}>
 
         {apiRoutes.map((route, index) => (
           <Panel

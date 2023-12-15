@@ -1,4 +1,5 @@
-// import Tag from "../Tag/Tag";
+
+import Tag from "../Tag/Tag";
 
 function EventCard({ event }) {
   return (
@@ -29,6 +30,7 @@ function EventCard({ event }) {
                   month: "long",
                   year: "numeric",
                 })}
+
               </span>
             </div>
           </div>

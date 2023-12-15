@@ -195,7 +195,6 @@ app.get("/api/events/:id", (req, res) => {
       {
         model: Tag,
         as: "tags",
-
         through: { model: EventTag, attributes: [] },
 
       },
@@ -236,6 +235,7 @@ app.get("/api/events/:id", (req, res) => {
 // app.use("/api/priceTypes", priceTypesRouter);
 // app.use("/api/addresses", addressesRouter);
 // app.use("/api/groups", groupsRouter);
+
 
 app.listen(8080, () => {
   console.log("Server running on port 8080");

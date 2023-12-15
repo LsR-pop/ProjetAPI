@@ -1,4 +1,5 @@
 
+
 const { Sequelize, DataTypes, Model } = require("sequelize");
 
 const sequelize = new Sequelize(
@@ -364,6 +365,7 @@ Event.belongsTo(Group, { foreignKey: "group_id", as: "group" });
 // Définition des relations many-to-one entre Event et Address
 Address.hasMany(Event, { foreignKey: "address_id", as: "events" });
 Event.belongsTo(Address, { foreignKey: "address_id", as: "address" });
+
 
 module.exports = {
   Event,
