@@ -92,7 +92,7 @@ function EventDetail() {
           </div>
         </div>
       </div>
-      import ReactHtmlParser from 'react-html-parser';
+
       <div className="ml-32 mb-24 mr-96">
         <h2 className="mb-5 text-xl text-textColor font-medium">Description</h2>
         {event.description}
