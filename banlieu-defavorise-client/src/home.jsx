@@ -2,10 +2,11 @@ import SearchBar from "./components/SearchBar/index.jsx";
 import Tag from "./components/Tag/index.jsx";
 import Tag2 from "./components/Tag2/index.jsx";
 import Card from "./components/Card/index.jsx";
+import Map from "./components/Map/Map.jsx";
 import Filter from "./components/Filter/filter.jsx";
-import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
+// import "leaflet/dist/leaflet.css";
 import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer/index.jsx";
 
@@ -137,7 +138,8 @@ function Home() {
           <h2 className="text-5xl text-textColor font-medium mb-6">
             Carte de Paris
           </h2>
-          <div className="mb-6">
+          <Map />
+          {/* <div className="mb-6">
             <MapContainer
               style={{
                 height: "70vh",
@@ -151,8 +153,17 @@ function Home() {
                 attribution="Google Maps"
                 url="https://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}"
               />
+              {data &&
+                data.results.map((event) => (
+                  <Marker position={[event.lat, event.lon]} key={event.id}>
+                    <Popup>
+                      {event.title}
+                      <img src={event.cover_url} alt="" />
+                    </Popup>
+                  </Marker>
+                ))}
             </MapContainer>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer></Footer>
