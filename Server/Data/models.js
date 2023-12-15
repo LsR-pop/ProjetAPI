@@ -183,6 +183,9 @@ Event.init(
     url: {
       type: DataTypes.STRING,
     },
+    cover_url: {
+      type: DataTypes.STRING,
+    },
     title: {
       type: DataTypes.STRING,
     },

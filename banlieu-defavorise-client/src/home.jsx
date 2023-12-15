@@ -20,6 +20,12 @@ function Home() {
         console.log(data);
       });
   }, []);
+  const showRecentEvents = () => {
+    const sortedEvents = [...data].sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+    setData(sortedEvents);
+  };
 
   return (
     <div>
@@ -104,7 +110,7 @@ function Home() {
         </div>
       </div>
       <div className="flex flex-row justify-center gap-6 mb-12">
-        <Tag></Tag>
+        <Tag onClick={showRecentEvents}></Tag>
         <Tag2></Tag2>
       </div>
       <h4 className="text-primary-blue font-medium text-xl text-right mr-32 mb-6">
@@ -124,10 +130,10 @@ function Home() {
                 return <Card key={event.id} eventData={event} />;
               })}
           </div>
-          <div className="flex flex-row justify-center gap-6 mb-24">
+          {/* <div className="flex flex-row justify-center gap-6 mb-24">
             <Tag></Tag>
             <Tag></Tag>
-          </div>
+          </div> */}
           <h2 className="text-5xl text-textColor font-medium mb-6">
             Carte de Paris
           </h2>

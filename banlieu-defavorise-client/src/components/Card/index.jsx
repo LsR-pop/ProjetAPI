@@ -13,6 +13,7 @@ function Card({ eventData }) {
     );
     return formattedDate;
   };
+  console.log(eventData);
 
   return (
     <div className="flex flex-column">
@@ -22,6 +23,7 @@ function Card({ eventData }) {
           src={cover_url} // Assurez-vous d'avoir une propriété image dans vos données d'événement
           alt=""
         />
+
         <div className="flex flex-col gap-4">
           <Tag></Tag>
           <div className="flex flex-col gap-0.5">
